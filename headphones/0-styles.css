@@ -1,0 +1,215 @@
+/* Regular */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-Regular.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-Light.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('./fonts/SourceSansPro-It.otf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Start global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Small */
+@media (min-width:768px) {}
+
+/* Medium */
+@media (min-width:992px) {}
+
+/* Large  */
+@media (min-width:1200px) {}
+
+/* End global styles */
+
+/* Start first section */
+.container {
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 800px;
+    padding: 27px 200px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav img {
+    width: 161px;
+    height: 32px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+header nav ul li a {
+    color: #FFFFFf;
+}
+
+header nav ul li a:hover {
+    color: #FF6565;
+}
+
+section.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.first div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 290px;
+    width: 637px;
+    height: 313px;
+    color: #FFFFFf;
+    text-align: center;
+}
+
+section.first div h1 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+section.first div p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+section.first div button {
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #FF6565;
+    padding: 14px 30px;
+    margin: 40px 0 70px;
+    color: #FFFFFf;
+    border: 1px;
+    border-radius: 29px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3), -3px -3px 10px rgba(255, 255, 255, 0.3);
+}
+
+section.first div p:nth-of-type(2) {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* tablet */
+@media(max-width:992px) {
+    .container {
+        padding: 29px 66px;
+        background-position: 25% 50%;
+    }
+
+    header nav ul li {
+        padding-left: 28px;
+    }
+
+    section.first div button {
+        padding: 14px 23px;
+    }
+}
+
+/* phone */
+@media(max-width:580px) {
+    .container {
+        padding: 29px 21px;
+        height: 869px;
+        background-position: 33% 50%;
+    }
+
+    header::before {
+        content: "\f0c9";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+        color: #FFFFFf;
+        position: relative;
+        top: 30px;
+        font-size: 20px;
+        transition: content 0.3s ease;
+    }
+
+    header:hover:before,
+    header:hover ul {
+        content: "\f00d";
+        display: flex;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    header nav ul li {
+        font-weight: 400;
+        font-size: 16px;
+        padding-top: 25px;
+        padding-left: 0;
+    }
+}
+
+/* End first section */
